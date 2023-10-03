@@ -1,40 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+// React element using React.createElement.
 const heading = React.createElement(
   "h1",
   { id: "heading", class: "heading" },
   "Namaste React"
 );
 
-const h2ChildOne = React.createElement(
-  "h2",
-  {
-    id: "child1",
-    key: "child1",
-  },
-  "I am first h2"
+// React Element using JSX
+const jsxHeading = (
+  <h1 id="heading" className="heading">
+    Namaste React from JSX
+  </h1>
 );
 
-const h2ChildTow = React.createElement(
-  "h2",
-  {
-    id: "child2",
-    key: "child2",
-  },
-  "I am second h2"
-);
+const Title = () => <h1>Namaste React 🚀</h1>;
 
-const child = React.createElement("div", { id: "child" }, heading);
-
-const parent = React.createElement("div", { id: "parent" }, child);
-
-const parentWithMultipleChildren = React.createElement(
-  "div",
-  { id: "parent" },
-  [h2ChildOne, h2ChildTow]
-);
+// Functional Component
+const HeadingComponent = () => {
+  return (
+    <div>
+      <Title />
+      <Title></Title>
+      {Title()}
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-root.render(parentWithMultipleChildren);
+root.render(<HeadingComponent />);
