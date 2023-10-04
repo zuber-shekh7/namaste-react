@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gainsboro;
 }
 
 .logo {
@@ -64,4 +64,46 @@
 .restaurant-container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.top-rated-btn {
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid transparent;
+}
+
+.top-rated-btn:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.top-rated-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+.top-rated-container > h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+}
+
+.green {
+  background-color: green;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 4px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+}
+
+.red {
+  background-color: red;
+  color: white;
+  padding: 5px 7px;
+  border-radius: 4px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
 }
