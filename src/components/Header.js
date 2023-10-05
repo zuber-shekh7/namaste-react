@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 // utils
 import { LOGO_URL } from "../utils/constants";
 
 const Header = () => {
+  const [isLogin, setIsLogin] = useState();
+
+  const handleBtnClick = () => {
+    setIsLogin(!isLogin);
+  };
+
   return (
     <nav className="nav-container">
       <div className="logo-container">
@@ -16,6 +22,9 @@ const Header = () => {
           <li className="link">Contact Us</li>
           <li className="link">Profile</li>
           <li className="link">Cart</li>
+          <li className="link" onClick={handleBtnClick}>
+            {isLogin ? "Logout" : "Login"}
+          </li>
         </ul>
       </div>
     </nav>

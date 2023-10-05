@@ -71,6 +71,7 @@
   font-size: 18px;
   font-weight: bold;
   border: 1px solid transparent;
+  margin-right: 10px;
 }
 
 .top-rated-btn:hover {
@@ -90,6 +91,29 @@
   font-weight: lighter;
 }
 
+.search-container {
+  display: flex;
+  margin: 5px;
+}
+
+.search-container > .search-box {
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.search-container > .search-btn {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: gainsboro;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.search-container > .search-btn:hover {
+  cursor: pointer;
+}
 .green {
   background-color: green;
   color: white;
@@ -106,4 +130,37 @@
   border-radius: 4px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
+}
+
+.shimmer-container {
+  /* display: flex; */
+  margin: 20px;
+}
+
+.shimmer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shimmer-bar {
+  width: 400px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.shimmer-card-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  height: 400px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: gray;
+  margin: 5px;
+  border: 1px solid gray;
 }
