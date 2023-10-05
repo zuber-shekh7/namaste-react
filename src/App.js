@@ -1,8 +1,8 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 // components
 import Header from "./components/Header";
-import Body from "./components/Body";
 
 // css
 import "./App.css";
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };

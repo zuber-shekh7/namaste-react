@@ -19,6 +19,7 @@ const Body = () => {
     const newRestaurants =
       data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
+
     setData(newRestaurants);
     setFilterData(newRestaurants);
   };
