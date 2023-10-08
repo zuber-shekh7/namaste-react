@@ -164,3 +164,23 @@
   margin: 5px;
   border: 1px solid gray;
 }
+
+.user-card {
+  border: 1px solid black;
+  padding: 0px 10px;
+  margin: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+}
+
+.user-picture {
+  height: 100;
+  width: 100;
+  border-radius: 50%;
+}
+
+.heading {
+  margin: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+}

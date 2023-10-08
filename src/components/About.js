@@ -1,17 +1,28 @@
 import React from "react";
+import User from "./User";
+import UserClass from "./UserClass";
 
-const About = () => {
-  return (
-    <div>
-      <h2>About Us</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur
-        excepturi molestias quo ex, accusamus maiores libero aperiam repellendus
-        dignissimos. Corrupti commodi ullam minima, porro quos rerum quisquam
-        quibusdam ipsa.
-      </p>
-    </div>
-  );
-};
+class About extends React.Component {
+  // componentDidMount() {
+  //   this.timer = setInterval(() => {
+  //     console.log("Namaste React");
+  //   }, 1000);
+  // }
+
+  // componentWillUnmount() {
+  //   clearInterval(this.timer);
+  // }
+
+  render() {
+    return (
+      <div>
+        <h2 className="heading">About Us</h2>
+        <User />
+        <hr />
+        <UserClass />
+      </div>
+    );
+  }
+}
 
 export default About;
