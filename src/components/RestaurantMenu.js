@@ -6,23 +6,12 @@ import Shimmer from "./Shimmer";
 
 // utils
 import { CDN_URL, SWIGGY_MENU_API } from "../utils/constants";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  const [restaurant, setRestaurant] = useState(null);
-
   const params = useParams();
 
-  const fetchMenu = async () => {
-    const response = await fetch(
-      SWIGGY_MENU_API + "&restaurantId=" + params.id
-    );
-    const data = await response.json();
-    setRestaurant(data);
-  };
-
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  const restaurant = useRestaurantMenu(params.id);
 
   if (restaurant === null) {
     return <Shimmer />;

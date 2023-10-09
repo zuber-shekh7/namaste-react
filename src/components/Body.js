@@ -8,20 +8,28 @@ import Shimmer from "./Shimmer";
 import { SWIGGY_API } from "../utils/constants";
 
 const Body = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [filteredData, setFilterData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const fetchData = async () => {
+    setIsLoading(true);
     setData([]);
     const response = await fetch(SWIGGY_API);
-    const data = await response.json();
+    const json = await response.json();
     const newRestaurants =
-      data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants ||
+      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants ||
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants ||
+      [];
 
     setData(newRestaurants);
     setFilterData(newRestaurants);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -47,7 +55,7 @@ const Body = () => {
     setFilterData(filteredRestaurants);
   };
 
-  if (data.length === 0 && !searchTerm) {
+  if (isLoading) {
     return <Shimmer />;
   }
 
@@ -83,9 +91,16 @@ const Body = () => {
         <h4>Showing {filteredData.length} results</h4>
       </div>
       <div className="restaurant-container">
-        {filteredData.map((item) => {
-          return <RestaurantCard data={item} key={item.info.id} />;
-        })}
+        {filteredData && filteredData.length === 0 ? (
+          <div>
+            <h1 className="heading">No Restaurant Available</h1>
+          </div>
+        ) : (
+          filteredData.map((item) => {
+            return <RestaurantCard data={item} key={item.info.id} />;
+          })
+        )}
+        {}
       </div>
     </main>
   );

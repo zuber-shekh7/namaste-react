@@ -12,6 +12,7 @@
 .links {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 .link {
