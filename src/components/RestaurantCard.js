@@ -19,20 +19,28 @@ const RestaurantCard = (props) => {
   } = info;
   return (
     <Link to={`/restaurants/${id}`}>
-      <div className="card-container">
-        <img src={CDN_URL + cloudinaryImageId} alt="Restaurant Banner" />
-        <div className="info-container">
-          <h2 className="name">{name}</h2>
-          <span>
+      <div className="w-64 md:w-72 lg:w-96 shadow border border-transparent rounded-md hover:border-gray-200 hover:shadow-lg transition">
+        <img
+          className="rounded-t-md h-48 w-full object-cover"
+          src={CDN_URL + cloudinaryImageId}
+          alt="Restaurant Banner"
+        />
+        <div className="my-2 px-2 ">
+          <h2 className="text-2xl font-bold truncate block">{name}</h2>
+          <span className="font-medium text-sm block truncate">
             {locality} - {areaName}
           </span>
-          <h3>{cuisines.join(", ")}</h3>
-          <h5>{avgRating} Star</h5>
-          <h6>
+          <h3 className="font-bold block truncate">{cuisines.join(", ")}</h3>
+          <h5 className="font-bold text-yellow-600">{avgRating} Star</h5>
+          <h6 className="my-4">
             {isOpen ? (
-              <span className="green">Open Now</span>
+              <span className="bg-green-500 px-2 py-2 rounded text-white">
+                Open Now
+              </span>
             ) : (
-              <span className="red">Closed</span>
+              <span className="bg-red-500 px-2 py-2 rounded text-white">
+                Closed
+              </span>
             )}
           </h6>
         </div>

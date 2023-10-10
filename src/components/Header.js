@@ -13,33 +13,36 @@ const Header = () => {
     setIsLogin(!isLogin);
   };
 
+  const linkClass =
+    "text-xs sm:text-sm lg:text-base font-bold uppercase hover:cursor-pointer";
+
   return (
-    <nav className="nav-container">
-      <div className="logo-container">
+    <nav className="flex justify-between items-center border-b-2 border-b-black shadow-lg mx-auto px-5">
+      <div className="">
         <Link to="/">
-          <img className="logo" src={LOGO_URL} alt="foodVerse Logo" />
+          <img className="h-24 w-24" src={LOGO_URL} alt="foodVerse Logo" />
         </Link>
       </div>
-      <div className="links-container">
-        <ul className="links">
-          <li className="link">
+      <div className="">
+        <ul className="flex justify-around gap-x-2 items-center">
+          <li className={linkClass}>
             <span>Internet Status {onlineStatus ? "👍🏼" : "👎🏼"}</span>
           </li>
-          <li className="link">
+          <li className={linkClass}>
             <Link to="/">Home</Link>
           </li>
-          <li className="link">
+          <li className={linkClass}>
             <Link to="/about">About</Link>
           </li>
           {/* <li className="link">
             <Link to="/contact">Contact</Link>
           </li> */}
-          <li className="link">
+          <li className={linkClass}>
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="link">Profile</li>
-          <li className="link">Cart</li>
-          <li className="link" onClick={handleBtnClick}>
+          <li className={linkClass}>Profile</li>
+          <li className={linkClass}>Cart</li>
+          <li className={linkClass} onClick={handleBtnClick}>
             {isLogin ? "Logout" : "Login"}
           </li>
         </ul>

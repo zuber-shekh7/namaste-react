@@ -6,11 +6,12 @@ import Shimmer from "./Shimmer";
 
 // utils
 import { SWIGGY_API } from "../utils/constants";
+import restaurants from "../utils/mockData";
 
 const Body = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState([]);
-  const [filteredData, setFilterData] = useState([]);
+  const [data, setData] = useState(restaurants);
+  const [filteredData, setFilterData] = useState(restaurants);
   const [searchTerm, setSearchTerm] = useState("");
 
   const fetchData = async () => {
@@ -60,10 +61,10 @@ const Body = () => {
   }
 
   return (
-    <main className="main-container">
-      <div className="search-container">
+    <main className="container px-5 py-8">
+      <div className="flex gap-x-2">
         <input
-          className="search-box"
+          className="border-2 border-black rounded px-2 py-1"
           type="text"
           name=""
           id=""
@@ -74,27 +75,31 @@ const Body = () => {
         <button
           onClick={handleSearch}
           disabled={searchTerm.length === 0}
-          className="search-btn"
+          className="border-2 border-black px-4 rounded bg-black text-white"
         >
           Search
         </button>
+        <button
+          onClick={handleClick}
+          className="border-2 border-black px-4 rounded bg-gray-300"
+        >
+          Top Rated Restaurants
+        </button>
+        <button
+          onClick={handleReset}
+          className="border-2 border-black px-4 rounded bg-gray-300"
+        >
+          Reset filter
+        </button>
       </div>
-      <div className="top-rated-container">
-        <div>
-          <button onClick={handleClick} className="top-rated-btn">
-            Top Rated Restaurants
-          </button>
-          <button onClick={handleReset} className="top-rated-btn">
-            Reset filter
-          </button>
-        </div>
-        <h4>Showing {filteredData.length} results</h4>
+      <div className="mt-5">
+        <h4 className="text-sm font-medium">
+          Showing {filteredData.length} results
+        </h4>
       </div>
-      <div className="restaurant-container">
+      <div className="mt-5 flex justify-around flex-wrap gap-5">
         {filteredData && filteredData.length === 0 ? (
-          <div>
-            <h1 className="heading">No Restaurant Available</h1>
-          </div>
+          <h1 className="font-bold text-2xl">No Restaurant Available</h1>
         ) : (
           filteredData.map((item) => {
             return <RestaurantCard data={item} key={item.info.id} />;
