@@ -4,8 +4,12 @@ import { useParams } from "react-router-dom";
 // utils
 import { CDN_URL } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategories from "./RestaurantCategories";
+import RestaurantContext from "../utils/RestaurantContext";
 
 const RestaurantMenu = () => {
+  const [openIndex, setOpenIndex] = useState(0);
+
   const params = useParams();
 
   const restaurant = useRestaurantMenu(params.id);
@@ -54,9 +58,14 @@ const RestaurantMenu = () => {
   const menuItems =
     restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
       ?.card?.card?.itemCards ?? [];
+  const categories =
+    restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards ?? [];
+  const itemCategories = categories.filter((item) =>
+    item?.card?.card["@type"].endsWith("v2.ItemCategory")
+  );
 
   return (
-    <div className="px-5 py-12">
+    <div className="w-full lg:w-9/12 mx-auto px-5 py-12">
       <div>
         <div className="absolute mx-5 my-5 text-center">
           {info.isOpen ? (
@@ -90,7 +99,7 @@ const RestaurantMenu = () => {
       <div className="border-b my-5"></div>
       <h2 className="text-2xl font-bold uppercase text-center mt-5">Menu</h2>
       <div className="border-b my-5"></div>
-      <div className="">
+      {/* <div className="">
         {menuItems.map((item) => {
           return (
             <div className="flex justify-between mb-3" key={item.card.info.id}>
@@ -107,6 +116,11 @@ const RestaurantMenu = () => {
             </div>
           );
         })}
+      </div> */}
+      <div className="mt-5">
+        <RestaurantContext.Provider value={{ openIndex, setOpenIndex }}>
+          <RestaurantCategories items={itemCategories} />
+        </RestaurantContext.Provider>
       </div>
     </div>
   );
