@@ -1,7 +1,16 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
 
+import { useDispatch } from "react-redux";
+import { addItem } from "../redux/slices/cartSlice";
+
 const ItemAccordian = ({ item, showMenu, handleClick }) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (item) => {
+    dispatch(addItem(item));
+  };
+
   return (
     <div key={item.card.card.title} onClick={handleClick}>
       <div className="flex justify-between items-center bg-gray-200  py-4 mb-1 px-5">
@@ -36,6 +45,12 @@ const ItemAccordian = ({ item, showMenu, handleClick }) => {
                       className="h-24 rounded-xl"
                       src={`${CDN_URL}/${item.card.info.imageId}`}
                     />
+                    <button
+                      onClick={() => handleAddToCart(item)}
+                      className="py-1 px-2 text-sm bg-gray-300 hover:bg-gray-400 hover:cursor-pointer rounded shadow-lg mt-2 w-full"
+                    >
+                      ADD
+                    </button>
                   </div>
                 </div>
               </div>

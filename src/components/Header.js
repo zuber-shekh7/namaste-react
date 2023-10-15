@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 // utils
 import { LOGO_URL } from "../utils/constants";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState();
   const onlineStatus = useOnlineStatus();
+
+  const cartItems = useSelector((state) => state.cart.items);
 
   const handleBtnClick = () => {
     setIsLogin(!isLogin);
@@ -41,7 +44,11 @@ const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
           <li className={linkClass}>Profile</li>
-          <li className={linkClass}>Cart</li>
+          <li className={linkClass}>
+            <Link to="/cart">
+              Cart <span className="text-green-600">({cartItems.length})</span>
+            </Link>
+          </li>
           <li className={linkClass} onClick={handleBtnClick}>
             {isLogin ? "Logout" : "Login"}
           </li>
