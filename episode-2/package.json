@@ -1,0 +1,23 @@
+{
+  "name": "episode-2",
+  "version": "1.0.0",
+  "description": "Episode 2 of namaste react js by Akshay Saini",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Zuber Shekh",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 5 firefox versions"
+  ]
+}
