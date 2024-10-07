@@ -1,6 +1,6 @@
 # 🙏🏼 Namaste React JS 🚀
 
-Documenting my journey of learning React JS in depth from [namastedev.com](https://namastedev.com)
+Documenting my journey of learning React JS in depth from [namastedev.com](https://namastedev.com) by [Akshay Saini](https://www.youtube.com/@akshaymarch7)
 
 ## Episode 1
 
@@ -19,3 +19,22 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
 - What is the default order of importing the script inside the html ?
 - Library and Framework
 - react.development.js vs react.production.js (CDN files)
+
+## Episode 2
+
+- What is NPM ?
+- What is Bundler ?
+  - Webpack
+  - Parcel
+  - Vite
+- Dependency / Package
+  - Normal Dependencies
+  - Dev Dependencies
+  - Transitive Dependencies
+  - package.json vs package-lock.json
+  - ^ vs ~
+  - node_modules
+  - .gitignore
+  - npm vs npx
+- Features of Parcel
+- Browser List
