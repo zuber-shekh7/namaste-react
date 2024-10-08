@@ -38,3 +38,20 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
   - npm vs npx
 - Features of Parcel
 - Browser List
+
+## Episode 3
+
+- Scripts : package.json
+- JSX
+  - Can you build react app without using JSX ?
+  - Is JSX and HTML same ?
+  - React Element vs React Component
+  - Types of React Components
+    - Class Based Components
+    - Functional Components
+  - How to render react element ?
+  - How to render react component ?
+  - How to add react element inside react component ?
+  - How to add javascript expression inside react component ?
+  - How to add one react component inside another react component ?
+- Component Composition
