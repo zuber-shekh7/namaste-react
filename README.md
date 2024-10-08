@@ -55,3 +55,11 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
   - How to add javascript expression inside react component ?
   - How to add one react component inside another react component ?
 - Component Composition
+
+## Episode 4
+
+- Planning for Food Delivering Web App
+- What is Props ?
+- What is Config Driven UI ?
+- Different ways to apply css and style in react
+- Why we add Key for the Array based rendered components ?
