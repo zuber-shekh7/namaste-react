@@ -63,3 +63,18 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
 - What is Config Driven UI ?
 - Different ways to apply css and style in react
 - Why we add Key for the Array based rendered components ?
+
+## Episode 5
+
+- Import & Export
+  - Default export vs Named export
+  - Default import vs Named import
+- What is React Hooks ?
+- useState
+  - State Variable vs Noraml Variable
+- React Reconciliation Algorithm
+  - Virtual DOM
+  - Diff Algorithm
+- What is React Fiber ?
+- React File Structure
+- .js vs .jsx file extension
