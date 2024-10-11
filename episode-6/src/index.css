@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: #eeeeee;
+  --header-bg-color: #fbfbfb;
+  --header-text-color: #ff7f50;
+  --header-text-dark-color: #f6622c;
+  --header-border-color: #ff7f50;
+  --skeleton-bg-light: #fbfbfb;
+  --skeleton-bg-dark: #c5c5c5;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+main {
+  min-height: 100vh;
+}
+
+.navigation {
+  background-color: var(--header-bg-color);
+  border-bottom: 3px solid var(--header-border-color);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  margin: 0px 96px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container .logo {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.logo-container .title {
+  color: var(--header-text-color);
+  font-size: 24px;
+  font-weight: 900px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links .nav-link-item {
+  margin-right: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-links .nav-link-item a {
+  text-decoration: none;
+  color: var(--header-text-color);
+}
+
+.nav-links .login-button {
+  padding: 6px 12px;
+}
+
+.main-container {
+  margin: 0px 108px;
+}
+
+.restaurant-search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  width: 60%;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-right: 12px;
+  color: #575757;
+}
+
+.search-input:focus {
+  outline: 1px solid var(--header-border-color);
+  color: #575757;
+}
+
+.search-input::placeholder {
+  color: #9d9d9d;
+}
+
+.button {
+  padding: 12px 12px;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  background: var(--header-text-color);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  transition: all smooth 0.7s;
+}
+
+.button:hover {
+  background: var(--header-text-dark-color);
+  cursor: pointer;
+}
+
+.top-rated-restaurants {
+  margin: 18px 0;
+}
+
+.top-rated-restaurants-skeleton {
+  display: flex;
+  overflow: scroll;
+  margin: 18px 0;
+}
+
+.restaurant-search-skeleton-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box-skeleton {
+  width: 300px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: var(--skeleton-bg-dark);
+}
+
+.top-rated-button-skeleton {
+  width: 140px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: var(--skeleton-bg-dark);
+}
+
+.restaurants-container {
+  display: flex;
+  overflow: scroll;
+  margin: 36px 0px;
+}
+
+.card-container {
+  width: 400px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  opacity: 0.9;
+  background-color: var(--header-bg-color);
+  box-shadow: 12px 12px 24% black;
+}
+
+.card-container:hover {
+  cursor: pointer;
+  box-shadow: 24px 24px 20% black;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.card-container img {
+  width: inherit;
+  height: 200px;
+  object-fit: cover;
+  border-width: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card-container .card-body {
+  padding: 12px 18px;
+}
+
+.card-container .card-body h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--header-text-color);
+}
+
+.title-and-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-container .card-body h3,
+.card-container .card-body h4 {
+  margin-bottom: 6px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #575757;
+}
+
+.card-container .card-body h3 {
+  color: #1b1b1b;
+}
+.card-container .card-body .title-and-rating h4 {
+  background-color: var(--header-text-dark-color);
+  color: white;
+  font-size: 12px;
+  padding: 8px 7px;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-border-color);
+  padding: 12px 24px;
+  color: white;
+}
+
+.footer .copyright {
+  font-size: 14px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.restaurant-card-skeleton-container {
+  width: 400px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  box-shadow: 12px 12px 24% black;
+}
+
+.restaurant-card-skeleton-header {
+  width: 400px;
+  border-radius: 6px;
+  background-color: var(--skeleton-bg-light);
+  height: 180px;
+}
+
+.restaurant-card-skeleton-body {
+  width: 400px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: var(--skeleton-bg-dark);
+  height: 150px;
+}

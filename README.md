@@ -78,3 +78,13 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
 - What is React Fiber ?
 - React File Structure
 - .js vs .jsx file extension
+
+## Episode 6
+
+- Monolith Architecture vs Microservice Architecture
+- What is an API ?
+- Different ways to call an API
+- useEffect
+- Conditional Rendering
+- Optional Chaining
+- Shimmer UI
