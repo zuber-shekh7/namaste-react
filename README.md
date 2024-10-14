@@ -88,3 +88,20 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
 - Conditional Rendering
 - Optional Chaining
 - Shimmer UI
+
+## Episode 7
+
+- useEffect
+
+  - useEffect(() => {})
+  - useEffect(() => {}, [])
+  - useEffect(() => {}, [state|prop])
+
+- Routing
+  - react-router-dom
+  - <a> vs <Link>
+  - Types of Routing in Web Apps
+    - Client Side Routing
+    - Server Side Routing
+- Behind Scene Working of <Link>
+- useParams vs useLocation vs useSearchParams
