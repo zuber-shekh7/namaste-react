@@ -105,3 +105,13 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
     - Server Side Routing
 - Behind Scene Working of <Link>
 - useParams vs useLocation vs useSearchParams
+
+## Episode 8
+
+- Class Based Component
+  - Props
+  - State
+- React Component Life Cycle
+- Myths about Functional Component & Class Based Component
+- useEffect vs componentDidMount vs componentDidUpdate
+- componentWillUnmount
