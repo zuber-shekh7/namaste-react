@@ -115,3 +115,15 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
 - Myths about Functional Component & Class Based Component
 - useEffect vs componentDidMount vs componentDidUpdate
 - componentWillUnmount
+
+## Episode 9
+
+- What is Modular Code ?
+- Custom Hooks ?
+- Lazy Loading
+  - Chunking
+  - Code Spilting
+  - Dynamic Bundling
+  - No Demand Loading
+- React Lazy Loading
+- Ways to optimize react application
