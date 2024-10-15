@@ -127,3 +127,22 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
   - No Demand Loading
 - React Lazy Loading
 - Ways to optimize react application
+
+## Episode 10
+
+- Ways to style React Components
+  - Using Inline style
+  - Using CSS file
+  - Using SASS file
+  - Using SCSS file
+  - Using Styled Components
+- Tailwind CSS
+  - Installation
+  - What is Post CSS ?
+- UI Libraries
+  - Chakra UI
+  - Ant Desing
+  - Material UI
+  - Bootstrap
+  - Tailwind CSS
+- Styled Components
