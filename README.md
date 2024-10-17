@@ -146,3 +146,10 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
   - Bootstrap
   - Tailwind CSS
 - Styled Components
+
+## Episode 11
+
+- Higher Order Components
+- Controlled Component vs Uncontrolled Component
+- Props Drilling
+- Context API
