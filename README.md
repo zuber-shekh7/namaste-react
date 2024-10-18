@@ -153,3 +153,16 @@ Documenting my journey of learning React JS in depth from [namastedev.com](https
 - Controlled Component vs Uncontrolled Component
 - Props Drilling
 - Context API
+
+## Episode 12
+
+- Redux
+  - Installation
+  - Creating Store.
+  - Creating Slice.
+  - Creating Actions.
+  - Creating Reducers.
+  - Selector
+  - Dispatch
+- Zustland
+- Vanila Redux vs Redux Tool Kit (RTK)
